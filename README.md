@@ -10,7 +10,7 @@ This was our final project for our Space Robotics course, and the idea was: _can
 
 ### 🎬 Demo
 
-https://github.com/ReghunathRahul/Warthog_Mars_Simulation/raw/main/media/final_demo.mp4
+https://github.com/user-attachments/assets/c4f72019-527f-4448-a71b-6b7e056e7198
 
 ---
 
@@ -120,13 +120,13 @@ python3 run_mission.py
 ## More Videos
 
 #### Manual driving (ROS2 Teleop) on Mars terrain  3.721 m/s<sup>2</sup> gravity
-https://github.com/ReghunathRahul/Warthog_Mars_Simulation/raw/main/media/mars_manual.mp4
+https://github.com/user-attachments/assets/62014e4f-2f9c-4fec-b0f3-66d654c74531
 
 #### Manual driving (ROS2 Teleop) on Earth gravity 9.81 m/s<sup>2</sup> gravity
-https://github.com/ReghunathRahul/Warthog_Mars_Simulation/raw/main/media/earth_manual.mp4
+https://github.com/user-attachments/assets/7b445cb7-b8e7-45e3-b25d-a46f6c92dd44
 
 #### Blooper reel 🤦
-https://github.com/ReghunathRahul/Warthog_Mars_Simulation/raw/main/media/mars_blooper.mp4
+https://github.com/user-attachments/assets/6d0adc01-05b9-4ff8-a927-9bb20518323a
 
 ---
 
