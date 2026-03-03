@@ -1,0 +1,597 @@
+<?xml version="1.0" ?>
+
+<robot name="warthog">
+  <material name="dark_grey">
+    <color rgba="0.2 0.2 0.2 1.0"/>
+  </material>
+  <material name="light_grey">
+    <color rgba="0.4 0.4 0.4 1.0"/>
+  </material>
+  <material name="yellow">
+    <color rgba="0.95 0.816 0.082 1.0"/>
+  </material>
+  <material name="black">
+    <color rgba="0.15 0.15 0.15 1.0"/>
+  </material>
+  <material name="white">
+    <color rgba="0.9 0.9 0.9 1.0"/>
+  </material>
+  <material name="red">
+    <color rgba="0.9 0.0 0.0 1.0"/>
+  </material>
+
+  <!-- FRONT LEFT WHEEL -->
+  <link name="front_left_wheel_link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="15"/>
+      <inertia ixx="0.41562499999999997" ixy="0" ixz="0" iyy="0.6749999999999999" iyz="0" izz="0.41562499999999997"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 1.5707963267948966" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://warthog_descriptions/meshes/wheel.stl"/>
+      </geometry>
+      <material name="dark_grey"/>
+    </visual>
+    <collision>
+      <origin rpy="1.5707963267948966 0 0" xyz="0 0 0"/>
+      <geometry>
+        <cylinder length="0.25" radius="0.3"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="front_left_wheel_joint" type="continuous">
+    <parent link="left_diff_unit_link"/>
+    <child link="front_left_wheel_link"/>
+    <origin rpy="0 0 0" xyz="0.457367 0.0 -0.012977"/>
+    <axis xyz="0 1 0"/>
+  </joint>
+
+  <!-- FRONT RIGHT WHEEL -->
+  <link name="front_right_wheel_link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="15"/>
+      <inertia ixx="0.41562499999999997" ixy="0" ixz="0" iyy="0.6749999999999999" iyz="0" izz="0.41562499999999997"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 1.5707963267948966" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://warthog_descriptions/meshes/wheel.stl"/>
+      </geometry>
+      <material name="dark_grey"/>
+    </visual>
+    <collision>
+      <origin rpy="1.5707963267948966 0 0" xyz="0 0 0"/>
+      <geometry>
+        <cylinder length="0.25" radius="0.3"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="front_right_wheel_joint" type="continuous">
+    <parent link="right_diff_unit_link"/>
+    <child link="front_right_wheel_link"/>
+    <origin rpy="0 0 0" xyz="0.457367 -0.0 -0.012977"/>
+    <axis xyz="0 1 0"/>
+  </joint>
+
+  <!-- REAR LEFT WHEEL -->
+  <link name="rear_left_wheel_link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="15"/>
+      <inertia ixx="0.41562499999999997" ixy="0" ixz="0" iyy="0.6749999999999999" iyz="0" izz="0.41562499999999997"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 1.5707963267948966" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://warthog_descriptions/meshes/wheel.stl"/>
+      </geometry>
+      <material name="dark_grey"/>
+    </visual>
+    <collision>
+      <origin rpy="1.5707963267948966 0 0" xyz="0 0 0"/>
+      <geometry>
+        <cylinder length="0.25" radius="0.3"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="rear_left_wheel_joint" type="continuous">
+    <parent link="left_diff_unit_link"/>
+    <child link="rear_left_wheel_link"/>
+    <origin rpy="0 0 0" xyz="-0.457367 0.0 -0.012977"/>
+    <axis xyz="0 1 0"/>
+  </joint>
+
+  <!-- REAR RIGHT WHEEL -->
+  <link name="rear_right_wheel_link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="15"/>
+      <inertia ixx="0.41562499999999997" ixy="0" ixz="0" iyy="0.6749999999999999" iyz="0" izz="0.41562499999999997"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 1.5707963267948966" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://warthog_descriptions/meshes/wheel.stl"/>
+      </geometry>
+      <material name="dark_grey"/>
+    </visual>
+    <collision>
+      <origin rpy="1.5707963267948966 0 0" xyz="0 0 0"/>
+      <geometry>
+        <cylinder length="0.25" radius="0.3"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="rear_right_wheel_joint" type="continuous">
+    <parent link="right_diff_unit_link"/>
+    <child link="rear_right_wheel_link"/>
+    <origin rpy="0 0 0" xyz="-0.457367 -0.0 -0.012977"/>
+    <axis xyz="0 1 0"/>
+  </joint>
+
+  <!-- LEFT DIFFERENTIAL UNIT -->
+  <link name="left_diff_unit_link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 -0.05 0.197"/>
+      <mass value="50"/>
+      <inertia ixx="1.980416666666667" ixy="0" ixz="0" iyy="9.135416666666668" iyz="0" izz="9.135416666666668"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 1.5707963267948966" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://warthog_descriptions/meshes/rocker.stl"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0.15 0.15 0.15 1.0"/>
+      </material>
+    </visual>
+    <visual>
+      <origin rpy="0 0 1.5707963267948966" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://warthog_descriptions/meshes/fenders.stl"/>
+      </geometry>
+      <material name="yellow">
+        <color rgba="0.95 0.816 0.082 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 1.5707963267948966" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://warthog_descriptions/meshes/fenders_collision.stl"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin rpy="0 0 1.5707963267948966" xyz="0.0 -0.02 0.52"/>
+      <geometry>
+        <box size="0.28 0.95 0.024"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="left_diff_unit_joint" type="revolute">
+    <limit effort="100" lower="-0.4" upper="0.4" velocity="1"/>
+    <parent link="chassis_link"/>
+    <child link="left_diff_unit_link"/>
+    <origin rpy="0 0 0" xyz="0.0 0.56821 0.0"/>
+    <axis xyz="0 1 0"/>
+    <dynamics damping="100" friction="0.5"/>
+  </joint>
+
+  <!-- LEFT DIFF UNIT ACCESSORIES -->
+  <link name="left_diff_unit_buttons_link">
+    <visual>
+      <geometry>
+        <mesh filename="package://warthog_descriptions/meshes/buttons.stl"/>
+      </geometry>
+      <material name="red">
+        <color rgba="0.9 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0.0395 0.4315 0.520"/>
+      <geometry>
+        <cylinder length="0.014" radius="0.0205"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin rpy="0 0 0" xyz="0.0395 -0.4315 0.520"/>
+      <geometry>
+        <cylinder length="0.014" radius="0.0205"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="left_diff_unit_buttons" type="fixed">
+    <origin rpy="0 0 1.5707963267948966" xyz="0 0 0"/>
+    <parent link="left_diff_unit_link"/>
+    <child link="left_diff_unit_buttons_link"/>
+  </joint>
+
+  <link name="left_diff_unit_headlight_link">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 -0.029 0"/>
+      <geometry>
+        <mesh filename="package://warthog_descriptions/meshes/light.stl"/>
+      </geometry>
+      <material name="white">
+        <color rgba="0.9 0.9 0.9 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 -0.022 0"/>
+      <geometry>
+        <mesh filename="package://warthog_descriptions/meshes/light_collision.stl"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="left_diff_unit_headlight_joint" type="fixed">
+    <parent link="left_diff_unit_link"/>
+    <child link="left_diff_unit_headlight_link"/>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+  </joint>
+
+  <link name="left_diff_unit_taillight_link">
+    <visual>
+      <origin rpy="0 0 3.141592653589793" xyz="0 -0.029 0"/>
+      <geometry>
+        <mesh filename="package://warthog_descriptions/meshes/light.stl"/>
+      </geometry>
+      <material name="red">
+        <color rgba="0.9 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 3.141592653589793" xyz="0 -0.022 0"/>
+      <geometry>
+        <mesh filename="package://warthog_descriptions/meshes/light_collision.stl"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="left_diff_unit_taillight_joint" type="fixed">
+    <parent link="left_diff_unit_link"/>
+    <child link="left_diff_unit_taillight_link"/>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+  </joint>
+
+  <!-- RIGHT DIFFERENTIAL UNIT -->
+  <link name="right_diff_unit_link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0.05 0.197"/>
+      <mass value="50"/>
+      <inertia ixx="1.980416666666667" ixy="0" ixz="0" iyy="9.135416666666668" iyz="0" izz="9.135416666666668"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 -1.5707963267948966" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://warthog_descriptions/meshes/rocker.stl"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0.15 0.15 0.15 1.0"/>
+      </material>
+    </visual>
+    <visual>
+      <origin rpy="0 0 -1.5707963267948966" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://warthog_descriptions/meshes/fenders.stl"/>
+      </geometry>
+      <material name="yellow">
+        <color rgba="0.95 0.816 0.082 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 -1.5707963267948966" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://warthog_descriptions/meshes/fenders_collision.stl"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin rpy="0 0 -1.5707963267948966" xyz="0.0 0.02 0.52"/>
+      <geometry>
+        <box size="0.28 0.95 0.024"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="right_diff_unit_joint" type="revolute">
+    <limit effort="100" lower="-0.4" upper="0.4" velocity="1"/>
+    <parent link="chassis_link"/>
+    <child link="right_diff_unit_link"/>
+    <origin rpy="0 0 0" xyz="0.0 -0.56821 0.0"/>
+    <axis xyz="0 1 0"/>
+    <dynamics damping="100" friction="0.5"/>
+  </joint>
+
+  <!-- RIGHT DIFF UNIT ACCESSORIES -->
+  <link name="right_diff_unit_buttons_link">
+    <visual>
+      <geometry>
+        <mesh filename="package://warthog_descriptions/meshes/buttons.stl"/>
+      </geometry>
+      <material name="red">
+        <color rgba="0.9 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0.0395 0.4315 0.520"/>
+      <geometry>
+        <cylinder length="0.014" radius="0.0205"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin rpy="0 0 0" xyz="0.0395 -0.4315 0.520"/>
+      <geometry>
+        <cylinder length="0.014" radius="0.0205"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="right_diff_unit_buttons" type="fixed">
+    <origin rpy="0 0 -1.5707963267948966" xyz="0 0 0"/>
+    <parent link="right_diff_unit_link"/>
+    <child link="right_diff_unit_buttons_link"/>
+  </joint>
+
+  <link name="right_diff_unit_headlight_link">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0.029 0"/>
+      <geometry>
+        <mesh filename="package://warthog_descriptions/meshes/light.stl"/>
+      </geometry>
+      <material name="white">
+        <color rgba="0.9 0.9 0.9 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0.022 0"/>
+      <geometry>
+        <mesh filename="package://warthog_descriptions/meshes/light_collision.stl"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="right_diff_unit_headlight_joint" type="fixed">
+    <parent link="right_diff_unit_link"/>
+    <child link="right_diff_unit_headlight_link"/>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+  </joint>
+
+  <link name="right_diff_unit_taillight_link">
+    <visual>
+      <origin rpy="0 0 -3.141592653589793" xyz="0 0.029 0"/>
+      <geometry>
+        <mesh filename="package://warthog_descriptions/meshes/light.stl"/>
+      </geometry>
+      <material name="red">
+        <color rgba="0.9 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 -3.141592653589793" xyz="0 0.022 0"/>
+      <geometry>
+        <mesh filename="package://warthog_descriptions/meshes/light_collision.stl"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="right_diff_unit_taillight_joint" type="fixed">
+    <parent link="right_diff_unit_link"/>
+    <child link="right_diff_unit_taillight_link"/>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+  </joint>
+
+  <!-- BASE AND CHASSIS LINKS -->
+  <link name="base_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.01"/>
+      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+    </inertial>
+  </link>
+
+  <joint name="base_link_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.025"/>
+    <parent link="base_link"/>
+    <child link="chassis_link"/>
+  </joint>
+
+  <link name="chassis_link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="100"/>
+      <inertia ixx="4.833333333333333" ixy="0" ixz="0" iyy="15.937500000000002" iyz="0" izz="15.937500000000002"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://warthog_descriptions/meshes/chassis.stl"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0.15 0.15 0.15 1.0"/>
+      </material>
+    </visual>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://warthog_descriptions/meshes/e_stop.stl"/>
+      </geometry>
+      <material name="red">
+        <color rgba="0.9 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://warthog_descriptions/meshes/chassis_collision.stl"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="top_chassis_link"/>
+
+  <joint name="top_link_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.27218"/>
+    <parent link="chassis_link"/>
+    <child link="top_chassis_link"/>
+  </joint>
+
+  <!-- DIFFERENTIAL LINK (VISUAL ONLY) -->
+  <link name="diff_link">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://warthog_descriptions/meshes/diff_link.stl"/>
+      </geometry>
+      <material name="light_grey"/>
+    </visual>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://warthog_descriptions/meshes/susp_link.stl"/>
+      </geometry>
+      <material name="light_grey"/>
+    </visual>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://warthog_descriptions/meshes/susp_link.stl"/>
+      </geometry>
+      <material name="light_grey"/>
+    </visual>
+  </link>
+
+  <joint name="diff_link_joint" type="fixed">
+    <parent link="chassis_link"/>
+    <child link="diff_link"/>
+    <origin rpy="0 0 0" xyz="-0.5826 0 0.24979"/>
+  </joint>
+
+  <!-- IMU LINK -->
+  <link name="imu_link"/>
+
+  <joint name="imu_link_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <parent link="chassis_link"/>
+    <child link="imu_link"/>
+  </joint>
+
+  <!-- BULKHEAD ASSEMBLY -->
+  <!-- The bulkhead provides a vertical mounting surface at the front of the rover -->
+  <link name="bulkhead_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://warthog_descriptions/meshes/bulkhead.stl"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0.15 0.15 0.15 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://warthog_descriptions/meshes/bulkhead_collision.stl"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0.35915 0 -0.6956" rpy="0 0 0"/>
+      <mass value="14.38835"/>
+      <inertia ixx="1.13395" ixy="0.0" ixz="-0.42719" iyy="2.59727" iyz="0.0" izz="3.42344"/>
+    </inertial>
+  </link>
+
+  <joint name="bulkhead_link_joint" type="fixed">
+    <origin xyz="0.00705 0 0.24184" rpy="0 0 0"/>
+    <parent link="top_chassis_link"/>
+    <child link="bulkhead_link"/>
+  </joint>
+
+  <!-- BULKHEAD FRONT MOUNT -->
+  <!-- This is the primary mounting point on the front of the bulkhead -->
+  <!-- Attach sensors and payloads to this link in Isaac Sim -->
+  <link name="bulkhead_front_mount_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.01"/>
+      <inertia ixx="0.00001" ixy="0" ixz="0" iyy="0.00001" iyz="0" izz="0.00001"/>
+    </inertial>
+  </link>
+
+  <joint name="bulkhead_front_mount_link_joint" type="fixed">
+    <origin xyz="0.33987 0 0.0" rpy="0 0 0"/>
+    <parent link="bulkhead_link"/>
+    <child link="bulkhead_front_mount_link"/>
+  </joint>
+
+  <!-- ARM MOUNT PLATE -->
+  <!-- Optional mounting plate for robotic arms or heavy payloads -->
+  <link name="arm_mount_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://warthog_descriptions/meshes/arm_mount_plate.stl"/>
+      </geometry>
+      <material name="light_grey"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://warthog_descriptions/meshes/arm_mount_plate.stl"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0 0 -0.01" rpy="0 0 0"/>
+      <mass value="1.45"/>
+      <inertia ixx="0.005430526666666667" ixy="0" ixz="0" iyy="0.005430526666666667" iyz="0" izz="0.010283316666666668"/>
+    </inertial>
+  </link>
+
+  <joint name="arm_mount_link_joint" type="fixed">
+    <origin xyz="0 0 0.02" rpy="0 0 0"/>
+    <parent link="bulkhead_front_mount_link"/>
+    <child link="arm_mount_link"/>
+  </joint>
+
+  <!-- SENSOR MOUNTING POINTS -->
+  <!-- These are convenient mounting points for LiDAR and cameras -->
+  <!-- You can attach sensors directly to bulkhead_front_mount_link or arm_mount_link in Isaac Sim -->
+  
+  <!-- LiDAR mount on top of bulkhead -->
+  <link name="lidar_mount_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.01"/>
+      <inertia ixx="0.00001" ixy="0" ixz="0" iyy="0.00001" iyz="0" izz="0.00001"/>
+    </inertial>
+  </link>
+
+  <joint name="lidar_mount_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.15"/>
+    <parent link="arm_mount_link"/>
+    <child link="lidar_mount_link"/>
+  </joint>
+
+  <!-- Camera mount on front of bulkhead -->
+  <link name="camera_mount_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.01"/>
+      <inertia ixx="0.00001" ixy="0" ixz="0" iyy="0.00001" iyz="0" izz="0.00001"/>
+    </inertial>
+  </link>
+
+  <joint name="camera_mount_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0.1 0 0.0"/>
+    <parent link="arm_mount_link"/>
+    <child link="camera_mount_link"/>
+  </joint>
+
+</robot>

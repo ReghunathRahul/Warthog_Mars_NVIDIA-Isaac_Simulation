@@ -1,0 +1,3 @@
+source;share/warthog_nav2/hook/pythonpath.ps1
+source;share/warthog_nav2/hook/pythonpath.dsv
+source;share/warthog_nav2/hook/pythonpath.sh

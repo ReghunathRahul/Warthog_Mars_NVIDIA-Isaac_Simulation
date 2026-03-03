@@ -1,0 +1,27 @@
+[0.342s] Invoking command in '/home/jotheesh/warthog_nav2_ws/src/warthog_nav2': PYTHONPATH=/home/jotheesh/warthog_nav2_ws/build/warthog_nav2/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jotheesh/warthog_nav2_ws/install/warthog_nav2/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/warthog_nav2 build --build-base /home/jotheesh/warthog_nav2_ws/build/warthog_nav2/build install --record /home/jotheesh/warthog_nav2_ws/build/warthog_nav2/install.log --single-version-externally-managed install_data
+[0.434s] /home/jotheesh/.local/lib/python3.10/site-packages/setuptools/_distutils/dist.py:289: UserWarning: Unknown distribution option: 'tests_require'
+[0.434s]   warnings.warn(msg)
+[0.478s] running egg_info
+[0.484s] writing ../../build/warthog_nav2/warthog_nav2.egg-info/PKG-INFO
+[0.484s] writing dependency_links to ../../build/warthog_nav2/warthog_nav2.egg-info/dependency_links.txt
+[0.484s] writing requirements to ../../build/warthog_nav2/warthog_nav2.egg-info/requires.txt
+[0.484s] writing top-level names to ../../build/warthog_nav2/warthog_nav2.egg-info/top_level.txt
+[0.499s] reading manifest file '../../build/warthog_nav2/warthog_nav2.egg-info/SOURCES.txt'
+[0.499s] writing manifest file '../../build/warthog_nav2/warthog_nav2.egg-info/SOURCES.txt'
+[0.499s] running build
+[0.500s] running build_py
+[0.500s] copying warthog_nav2/__init__.py -> /home/jotheesh/warthog_nav2_ws/build/warthog_nav2/build/lib/warthog_nav2
+[0.500s] running install
+[0.502s] running install_lib
+[0.510s] running install_data
+[0.511s] copying resource/warthog_nav2 -> /home/jotheesh/warthog_nav2_ws/install/warthog_nav2/share/ament_index/resource_index/packages
+[0.511s] copying package.xml -> /home/jotheesh/warthog_nav2_ws/install/warthog_nav2/share/warthog_nav2
+[0.511s] copying launch/warthog_mppi.launch.py -> /home/jotheesh/warthog_nav2_ws/install/warthog_nav2/share/warthog_nav2/launch
+[0.511s] copying config/mppi.yaml -> /home/jotheesh/warthog_nav2_ws/install/warthog_nav2/share/warthog_nav2/config
+[0.511s] copying config/local_costmap.yaml -> /home/jotheesh/warthog_nav2_ws/install/warthog_nav2/share/warthog_nav2/config
+[0.511s] running install_egg_info
+[0.518s] removing '/home/jotheesh/warthog_nav2_ws/install/warthog_nav2/lib/python3.10/site-packages/warthog_nav2-0.0.0-py3.10.egg-info' (and everything under it)
+[0.518s] Copying ../../build/warthog_nav2/warthog_nav2.egg-info to /home/jotheesh/warthog_nav2_ws/install/warthog_nav2/lib/python3.10/site-packages/warthog_nav2-0.0.0-py3.10.egg-info
+[0.518s] running install_scripts
+[0.534s] writing list of installed files to '/home/jotheesh/warthog_nav2_ws/build/warthog_nav2/install.log'
+[0.548s] Invoked command in '/home/jotheesh/warthog_nav2_ws/src/warthog_nav2' returned '0': PYTHONPATH=/home/jotheesh/warthog_nav2_ws/build/warthog_nav2/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jotheesh/warthog_nav2_ws/install/warthog_nav2/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/warthog_nav2 build --build-base /home/jotheesh/warthog_nav2_ws/build/warthog_nav2/build install --record /home/jotheesh/warthog_nav2_ws/build/warthog_nav2/install.log --single-version-externally-managed install_data

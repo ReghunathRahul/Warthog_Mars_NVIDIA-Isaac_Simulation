@@ -1,0 +1,16 @@
+digraph G {
+"world" -> "odom"[label=" Broadcaster: default_authority\nAverage rate: 30.219\nBuffer length: 4.567\nMost recent transform: 13014.167345\nOldest transform: 13009.600679\n"];
+"odom" -> "base_link"[label=" Broadcaster: default_authority\nAverage rate: 60.219\nBuffer length: 4.567\nMost recent transform: 13014.167345\nOldest transform: 13009.600679\n"];
+"base_link" -> "chassis_link"[label=" Broadcaster: default_authority\nAverage rate: 30.221\nBuffer length: 4.533\nMost recent transform: 13014.134012\nOldest transform: 13009.600679\n"];
+"left_diff_unit_link" -> "front_left_wheel_link"[label=" Broadcaster: default_authority\nAverage rate: 60.441\nBuffer length: 4.533\nMost recent transform: 13014.134012\nOldest transform: 13009.600679\n"];
+"right_diff_unit_link" -> "front_right_wheel_link"[label=" Broadcaster: default_authority\nAverage rate: 60.441\nBuffer length: 4.533\nMost recent transform: 13014.134012\nOldest transform: 13009.600679\n"];
+"left_diff_unit_link" -> "rear_left_wheel_link"[label=" Broadcaster: default_authority\nAverage rate: 60.441\nBuffer length: 4.533\nMost recent transform: 13014.134012\nOldest transform: 13009.600679\n"];
+"right_diff_unit_link" -> "rear_right_wheel_link"[label=" Broadcaster: default_authority\nAverage rate: 60.441\nBuffer length: 4.533\nMost recent transform: 13014.134012\nOldest transform: 13009.600679\n"];
+"base_link" -> "lidar_mount_link"[label=" Broadcaster: default_authority\nAverage rate: 30.221\nBuffer length: 4.533\nMost recent transform: 13014.134012\nOldest transform: 13009.600679\n"];
+"base_link" -> "left_diff_unit_link"[label=" Broadcaster: default_authority\nAverage rate: 30.221\nBuffer length: 4.533\nMost recent transform: 13014.134012\nOldest transform: 13009.600679\n"];
+"base_link" -> "right_diff_unit_link"[label=" Broadcaster: default_authority\nAverage rate: 30.221\nBuffer length: 4.533\nMost recent transform: 13014.134012\nOldest transform: 13009.600679\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1765180050.8128867"[ shape=plaintext ] ;
+}->"world";
+}

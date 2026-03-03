@@ -1,0 +1,30 @@
+rtabmap:
+  ros__parameters:
+    # 1. System Settings
+    use_sim_time: true
+    allow_undeclared_parameters: true
+    automatically_declare_parameters_from_overrides: true
+    
+    # 2. Input Topics (Lidar Only)
+    subscribe_depth: false
+    subscribe_rgb: false
+    subscribe_scan: false
+    subscribe_scan_cloud: true
+    approx_sync: true
+    queue_size: 20
+    
+    # 3. Frames
+    frame_id: "base_link"
+    map_frame_id: "world"
+    publish_tf: false
+    
+    # 4. QoS (Fixes black screen)
+    qos_scan: 2
+    qos_odom: 2
+    
+    # 5. RTAB-Map Core Parameters (The ones that were crashing)
+    Reg/Strategy: "1"       # 1=ICP
+    Reg/Force3DoF: "true"   # 2D Mode (No IMU)
+    Odom/Strategy: "1"      # Frame-to-Map
+    Grid/Sensor: "0"        # Generate map from Laser
+    Mem/IncrementalMemory: "true"
